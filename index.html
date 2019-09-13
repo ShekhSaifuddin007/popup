@@ -45,7 +45,7 @@
 								<div class="col-5  mobile-screen__small" style="padding: 0">
 									<div class="form-bg">
 
-										<span class="close_btn">&times;</span>
+										<span class="close_btn" id="closeBtn">&times;</span>
 
 										<div class="form">
 											<form action="" method="">
@@ -90,6 +90,10 @@
 			setTimeout(function () {
 				$('#popupScreen').show();
 			}, delay);
+
+			$('#closeBtn').click(function () {
+				$('#popupScreen').hide('slow');
+			});
 
 		});
 	</script>
