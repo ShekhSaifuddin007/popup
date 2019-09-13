@@ -4,22 +4,24 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Popup</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./dist/bootstrap.min.css">
+	<script src="./dist/jquery.min.js"></script>
+	<link rel="stylesheet" href="./dist/animate.css">
 	<link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
 
 	<div class="bg">
-		<section>
+		<section id="popupScreen" class="popup-screen animated rotateInUpRight" style="display: none;">
 			<div class="container">
 				<div class="row">
 					<div class="box">
 						<div class="col-lg-12 col-md-12">
 							<div class="row">
-								<div class="col-7">
+								<div class="col-7 mobile-screen__big">
 									<div class="image-svg__box">
-										<div class="image pt-5">
+										<div class="image pt-5 animated swing delay-2s fast">
 											<img src="https://i2.wp.com/titusmotiontherapy.com/wp-content/uploads/2019/07/TMT-ebook-photo.png" alt="image" class="image-responsive" style="width: 100%; height: 100%">
 										</div>
 
@@ -40,7 +42,7 @@
 									</div>
 								</div>
 
-								<div class="col-5" style="padding: 0">
+								<div class="col-5  mobile-screen__small" style="padding: 0">
 									<div class="form-bg">
 
 										<span class="close_btn">&times;</span>
@@ -79,6 +81,18 @@
 		</section>
 	</div>
 
+
+	<script>
+		$(document).ready(function () {
+
+			var delay = 3000; //after 5sec popup will show.
+
+			setTimeout(function () {
+				$('#popupScreen').show();
+			}, delay);
+
+		});
+	</script>
 
 </body>
 
